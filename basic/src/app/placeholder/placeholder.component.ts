@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaceholderComponent implements OnInit {
 
-  width=0;
-  height=0;
+  width = 0;
+  height = 0;
   imageURL;
-  urlTypes =  [{name:'Kitten',dest:'https://placekitten.com/'},
-              {name:'Beard',dest:'https://placebeard.it/'},
-              {name:'cage',dest:'https://www.placecage.com/'}
-];
+  urlTypes = [{ name: 'Kitten', dest: 'https://placekitten.com/' },
+  { name: 'Beard', dest: 'https://placebeard.it/' },
+  { name: 'cage', dest: 'https://www.placecage.com/' }
+  ];
   imgSrc;
 
   constructor() { }
