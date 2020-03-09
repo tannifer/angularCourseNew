@@ -1,0 +1,46 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+ <article>
+  <h2>Welcome {{title}}, I would like a {{flavour}}</h2>
+  <app-my-form></app-my-form>
+  <p>one plus two equals {{ 1+2 }}</p>
+  <section *ngIf='!cookieFlag'>
+    <button (click)='handleCookies()'>Accept Cookies</button>
+  </section>
+  <aside [hidden]='cookieFlag'>
+    <p>This is conditionally displayed</p>
+    <img [src]='imageSource' alt='an image'/>
+  </aside>
+  <section>
+    <ul>
+      <li *ngFor='let item of products'>{{item.name}} {{item.price |currency:'GBP'}}</li>
+    </ul>
+  </section>
+  <section>
+    <app-placeholder></app-placeholder>
+  </section>
+ </article>
+</div>
+
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
