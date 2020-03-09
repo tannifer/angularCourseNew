@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'is it coffee yet?';
   flavour = 'LATTIE';
   cookieFlag = false;
+  cart = [];
   products = [{name:'Pots',price:3.99},
               {name:'Pans',price:2.99},
               {name:'Cups',price:1.99}
@@ -20,6 +21,10 @@ export class AppComponent {
 handleCookies() {
   console.log('button clicked');
   this.cookieFlag = true;
+}
+
+addToCart(purchase) {
+  this.cart.push(purchase);
 }
 
 }

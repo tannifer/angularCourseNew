@@ -1,15 +1,86 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Basic</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://www.st-andrews.ac.uk/~cdn/dpl/1.22.1/styles/screen.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="https://www.st-andrews.ac.uk/~cdn/dpl/1.22.1/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+  <link href="https://www.st-andrews.ac.uk/~cdn/dpl/1.22.1/styles/screen.css" rel="stylesheet" type="text/css"
+    media="screen" />
+  <link href="https://www.st-andrews.ac.uk/~cdn/dpl/1.22.1/styles/print.css" rel="stylesheet" type="text/css"
+    media="print" />
 </head>
+
 <body>
+  <!-- Begin pattern: header //-->
+  <div class="sr-only"><a href="#content-begin">Skip to content</a></div>
+  <header id="header" class="" role="banner">
+    <div class="row">
+      <div id="logo-container">
+        <div id="header-logo"><a href="https://www.st-andrews.ac.uk/"><span>University of St&nbsp;Andrews</span></a>
+        </div>
+      </div>
+      <div id="header-search" role="search">
+        <button class="btn btn-link" id="header-search-trigger" name="btnG" type="button" value=""><i
+            class="fa fa-search" title="Search"></i></button>
+        <form action="https://www.st-andrews.ac.uk/search" method="get">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-link" id="header-search-close" name="btnG" type="button" value=""><i
+                  class="fa fa-times" title="Close"></i></button>
+            </span>
+            <input id="query" class="form-control" name="query" type="text" title="Enter search keywords"
+              maxlength="256" placeholder="Search the University website">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" id="header-search-submit" name="btnG" type="submit" value="Search"><i
+                  class="fa fa-search" title="Search"></i></button>
+            </span>
+          </div>
+          <input type="hidden" name="collection" value="Uosa-meta-global">
+          <input type="hidden" name="profile" value="_default">
+          <input type="hidden" name="form" value="partial">
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- End pattern: header //-->
+
   <app-root></app-root>
+
+  <p></p>
+  <footer id="footer">
+    <div id="university-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <p id="footer-charity" role="contentinfo">© 2019 The University of St&nbsp;Andrews is a charity registered
+              in Scotland, No SC013532.</p>
+            <ul id="footer-links">
+              <li><a href="http://www.st-andrews.ac.uk/terms/cookie-policy">Cookie policy</a></li>
+              <li><a href="http://www.st-andrews.ac.uk/terms/">Terms and conditions</a></li>
+              <li><a href="http://www.st-andrews.ac.uk/help/">Website help</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <ul id="social">
+              <li><a href="https://www.facebook.com/uniofsta"><span class="sr-only">Facebook</span><i
+                    class="fa fa-facebook-square fa-2x" title="Facebook"></i></a></li>
+              <li><a href="https://twitter.com/univofstandrews/"><span class="sr-only">Twitter</span><i
+                    class="fa fa-twitter-square fa-2x" title="Twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/uniofstandrews"><span class="sr-only">Instagram</span><i
+                    class="fa fa-instagram fa-2x" title="Instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/user/UofStAndrews"><span class="sr-only">YouTube</span><i
+                    class="fa fa-youtube-square fa-2x" title="YouTube"></i></a></li>
+            </ul>
+          </div>
+        </div> <!-- End .row //-->
+      </div> <!-- End .container //-->
+    </div> <!-- End #university-footer //-->
+  </footer>
+
+  <!-- End pattern: footer //-->
 </body>
+
 </html>

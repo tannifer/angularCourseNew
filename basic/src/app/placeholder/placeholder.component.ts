@@ -11,10 +11,10 @@ export class PlaceholderComponent implements OnInit {
   height=0;
   imageURL;
   urlTypes =  [{name:'Kitten',dest:'https://placekitten.com/'},
-  {name:'Beard',dest:'https://placebeard.it/'},
-  {name:'cage',dest:'https://www.placecage.com/'}
+              {name:'Beard',dest:'https://placebeard.it/'},
+              {name:'cage',dest:'https://www.placecage.com/'}
 ];
-imgSrc;
+  imgSrc;
 
   constructor() { }
 

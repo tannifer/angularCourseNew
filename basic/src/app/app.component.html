@@ -13,20 +13,31 @@
 <div class="toolbar" role="banner">
  <article>
   <h2>Welcome {{title}}, I would like a {{flavour}}</h2>
-  <app-my-form></app-my-form>
+  <!--<app-my-form></app-my-form>-->
+  <section>
+  <aside *ngFor='let item of products'> 
+    <app-item-renderer (purchaseEvent)='addToCart(item)' [whichItem]='item'></app-item-renderer>
+  </aside>
+</section>
+<hr/>
+<section>
+  <ul>
+    <li *ngFor='let item of cart'>{{item.name}} {{item.price |currency:'GBP'}}</li>
+  </ul>
+</section>
+ 
   <p>one plus two equals {{ 1+2 }}</p>
   <section *ngIf='!cookieFlag'>
     <button (click)='handleCookies()'>Accept Cookies</button>
   </section>
+  <hr/>
+
+
   <aside [hidden]='cookieFlag'>
     <p>This is conditionally displayed</p>
     <img [src]='imageSource' alt='an image'/>
   </aside>
-  <section>
-    <ul>
-      <li *ngFor='let item of products'>{{item.name}} {{item.price |currency:'GBP'}}</li>
-    </ul>
-  </section>
+  
   <section>
     <app-placeholder></app-placeholder>
   </section>

@@ -1,13 +1,21 @@
 <p>Please select a size of kitten!</p>
 
-<p><select [(ngModel)]='imgSrc'>
+<p><select [(ngModel)]='imgSrc' (change)='getKitten()'>
     <option *ngFor='let item of urlTypes' [value]='item.dest'>
         {{item.name}}
     </option>
 </select></p>
-<p>width={{width}} height={{height}}</p>
-<p><input [(ngModel)]='width' type="range" max=500/></p>
-<p><input [(ngModel)]='height' type="range" max=500/></p>
-<p><button (click)='getKitten()'>GO</button></p>
+<p>
+    width={{width}} height={{height}}
+</p>
+<p>
+    <input [(ngModel)]='width' type="range" min=16 max=500 (change)='getKitten()'/>
+</p>
+<p>
+    <input [(ngModel)]='height' type="range" min=16 max=500 (change)='getKitten()'/>
+</p>
+<p>
+    <button (click)='getKitten()'>GO</button>
+</p>
 <hr/>
     <img [src]='imageURL' />
