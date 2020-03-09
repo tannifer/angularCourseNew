@@ -9,7 +9,9 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'about',component:AboutComponent},
   {path:'info',component:InfoComponent},
-  {path:'home',component:HomeComponent}
+  {path:'home',component:HomeComponent},
+  {path:'index', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**',component:HomeComponent}
 ];
 
 @NgModule({
