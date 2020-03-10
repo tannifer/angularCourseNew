@@ -1,0 +1,10 @@
+<section>
+  <h2>Weather Whats it like outside</h2>
+  <p><input type=text placeholder="city"  [(ngModel)]='city'/></p>
+  <p><input type=text placeholder="country" [(ngModel)]='country'/></p>
+  <p><button (click)='getWeather()'>GO</button></p>
+  <h3>Temp is: {{weatherData?.main.temp-273 | number: '0.0-2'}}</h3>
+  <h3>Humidity is : {{weatherData?.main.humidity}}</h3>
+  <h2>Description is : {{myWeather?.description}}</h2>
+  <pre>{{weatherData | json}}</pre>
+</section>

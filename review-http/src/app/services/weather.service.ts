@@ -3,24 +3,24 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-
-  // Declare properties
-
-  dataUrl: string = 'http://jsonplaceholder.typicode.com/users';
+  //Declate properties.
+  dataUrl: string = 'http://api.openweathermap.org/data/2.5/weather?';
+  apiKey: string= '&APPID=48f2d5e18b0d2bc50519b58cce6409f1';
 
   getData(): Observable<any> {
     return this.http.get(this.dataUrl);
   }
 
-  retrieveSingleUser(param) {
-    return this.http.get(`${this.dataUrl}/${param}`)
+  retrieveWeather(city,country) {
+    return this.http.get(`${this.dataUrl}q=${city},${country}${this.apiKey}`)
     .pipe(retry(3),
       catchError(this.handleError)
     );
@@ -41,6 +41,5 @@ export class DataService {
     return throwError(
       'Something bad happened; please try again later.');
   };
-
 
 }

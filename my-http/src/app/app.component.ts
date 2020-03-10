@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,12 @@ export class AppComponent {
   // properties of this component
   title = 'my-http';
   recievedData = null;
-  whichUser =1;
+  whichUser:number =1;
   retrievedUser;
 
 constructor (private dataService: DataService) {}
 
-ngOnInit() {
+ngOnInit():void {
   this.getUsers();
 }
 
