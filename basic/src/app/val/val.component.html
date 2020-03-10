@@ -1,0 +1,14 @@
+<aside>
+    <form #myForm="ngForm">
+    <input name='foo' [(ngModel)]='user.name' required minlength="4" #foo='ngModel'/>
+    <span *ngIf='foo.invalid && (foo.dirty || foo.touched)'>
+        Name is required
+    </span>
+    <br/>
+    <button name='btnGo' [disabled]='myForm.invalid'>GO</button>
+    <br/>
+    <span *ngIf='foo.invalid && foo.errors.minlength'>
+        Name must be 4 characters in length
+    </span>
+    </form>
+</aside>
