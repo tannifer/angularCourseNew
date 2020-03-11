@@ -6,13 +6,15 @@ import { MyFormComponent } from './my-form/my-form.component';
 import { FormsModule} from '@angular/forms';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { ItemRendererComponent } from './item-renderer/item-renderer.component';
+import { ValComponent } from './val/val.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyFormComponent,
     PlaceholderComponent,
-    ItemRendererComponent
+    ItemRendererComponent,
+    ValComponent
   ],
   imports: [
     BrowserModule,
