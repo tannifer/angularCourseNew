@@ -1,0 +1,24 @@
+<article>
+    <h3>Using content Projection</h3>
+    <section>
+        <ng-container *ngTemplateOutlet='headerTemplate ? headerTemplate:defaultHeader'></ng-container>
+    </section>
+    <section>
+        <ng-container *ngTemplateOutlet='bodyTemplate ? bodyTemplate:defaultBody'></ng-container>
+    </section>
+    <section>
+        <ng-container *ngTemplateOutlet='footerTemplate ? footerTemplate:defaultFooter'></ng-container>
+    </section>
+</article>
+
+<ng-template #defaultHeader>
+    Default this is the default content for the header.
+</ng-template>
+
+<ng-template #defaultBody>
+    Default this is the default content for the Body.
+</ng-template>
+
+<ng-template #defaultFooter>
+    Default this is the default content for the footer.
+</ng-template>

@@ -1,0 +1,18 @@
+<aside>
+    
+   <!-- decalte overrides -->
+
+   <ng-template #customHeader>Custome content Header</ng-template>
+   <ng-template #customBody>Custome content Body</ng-template>
+   <ng-template #customFooter>Custome content Footer</ng-template>
+   <!-- use the defualt custable container-->
+    <app-custable></app-custable>
+
+    <!-- now with custom hearer and body -->
+
+    <app-custable [headerTemplate]='customHeader'
+    [bodyTemplate]='customBody'
+    [footerTemplate]='customFooter'>
+    </app-custable>
+
+</aside>

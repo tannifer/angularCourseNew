@@ -7,6 +7,8 @@ import { FormsModule} from '@angular/forms';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { ItemRendererComponent } from './item-renderer/item-renderer.component';
 import { ValComponent } from './val/val.component';
+import { CustableComponent } from './custable/custable.component';
+import { UsingCustableComponent } from './using-custable/using-custable.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ValComponent } from './val/val.component';
     MyFormComponent,
     PlaceholderComponent,
     ItemRendererComponent,
-    ValComponent
+    ValComponent,
+    CustableComponent,
+    UsingCustableComponent
   ],
   imports: [
     BrowserModule,
