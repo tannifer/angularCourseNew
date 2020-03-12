@@ -1,0 +1,23 @@
+<aside>
+    <select [(ngModel)]='stype'>
+        <option value="people">people</option>
+        <option value="planets">planets</option>
+        <option value="films">films</option>
+        <option value="species">species</option>
+        <option value="vehicles">vehicles</option>
+        <option value="starships">starships</option>
+    </select>
+   
+        <form #myForm='ngForm'>
+        <input name='foo' type=text  [(ngModel)]='id' required minlength="1" #foo='ngModel'/>
+        <span *ngIf='foo.invalid'>
+            id is required
+        </span>
+    
+    <p><button name='btnGo' (click)='getWar()'>GO</button></p>
+        </form>
+</aside>
+<aside>
+    <pre>{{recievedData | json}}</pre>
+</aside>
+
