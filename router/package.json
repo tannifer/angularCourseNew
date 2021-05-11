@@ -51,7 +51,7 @@
     "tslint": "~5.18.0",
     "typescript": "~3.7.5",
     "@angular/platform-server": "^8.0.0",
-    "lodash": "^4.16.2"
+    "lodash": "^4.17.21"
   },
   "repository": {}
 }
